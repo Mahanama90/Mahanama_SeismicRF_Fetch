@@ -1,0 +1,56 @@
+
+This script automates the downloading, processing, and organization of teleseismic event data required for Receiver Function (RF) analysis. It fetches event catalogs, station metadata, seismic waveform data, and corresponding pole-zero (PZ) response files for instrument correction.
+The main goal is to ensure efficient and structured data extraction, enabling researchers to select high-quality seismic waveforms for RF studies without manual filtering and organization.
+
+Features
+✅ Automated Event & Station Selection – Queries IRIS FDSN services to download event catalogs and station metadata.
+✅ Seismic Data Download – Fetches miniSEED waveform files, converts them to SAC format, and organizes them.
+✅ Automated P-Wave Arrival Calculation – Uses TauP travel-time calculations to align data on the P-wave arrival.
+✅ Instrument Correction Ready – Downloads corresponding Pole-Zero (PZ) response files for future instrument correction.
+✅ Data Organization – Saves event-specific SAC files, fetch logs, and PZ files in structured directories
+
+Usage Instructions
+Define study parameters in the script:
+
+Time range of events
+Geographic bounds
+Network, station, channels
+Depth and magnitude constraints
+
+Run the script in a Bash terminal: ./Download_Teleseismic_RF_Data_git.sh  For permision use chmod +
+
+Output directory structure (inside $WD/Event_RF/):
+
+📂 Event_RF/
+├── 📂 Info/             # Event & Station Metadata
+│   ├── Event_RF.txt     # Final event list (merged)
+│   ├── Event_Time.txt   # Event times for processing
+│   ├── STID.txt         # Station list
+│   ├── Tau_pick.txt     # P-wave arrival times
+│
+├── 📂 Fetch_Text/       # Logs of fetch requests
+├── 📂 Fetch_Script/     # Scripts for data fetching
+│   ├── FetchData_original.pl
+│
+├── 📂 Data/             # SAC waveform data
+│   ├── 📂 Event_ID/     # One folder per event
+│   │   ├── SAC_Files/   # Converted SAC files
+│   │   ├── Fetch_Files/ # Raw miniSEED + metadata
+│
+├── 📂 PZfile_Ev_St_Pair/ # PZ files per event-stationpair
+
+Required External Tools
+IRIS FetchData Script (FetchData_original.pl)
+TauP Toolkit (for P-wave arrival calculations)
+mseed2sac (for waveform conversion)
+
+Troubleshooting
+🚨 If data is missing:
+
+Ensure IRIS services are online
+Check network/station codes
+Verify TauP installation (taup_time -h)
+📧 For questions or improvements, feel free to contribute! 🚀
+
+
+
