@@ -1,5 +1,5 @@
 # Mahanama_SeismicRF_Fetch
-![RF Data Analysis](WVT_radial.jpg)
+![RF Data Analysis](WVT_Radial.jpg)
 Automated Script for Downloading and Processing Teleseismic Event Data for Receiver Function Analysis
 This script automates the downloading, processing, and organization of teleseismic event data required for Receiver Function (RF) analysis. It fetches event catalogs, station metadata, seismic waveform data, and corresponding pole-zero (PZ) response files for instrument correction.
 
