@@ -13,15 +13,18 @@ TauP Toolkit for travel-time calculations, for P-wave/P-Phases arrival calculati
 mseed2sac for miniSEED to SAC conversion (https://ds.iris.edu/ds/nodes/dmc/software/downloads/mseed2sac/2-1/)
 
 IRIS FetchData script for waveform downloading (Included in the repository)
+Main Script: Download_Teleseismic_RF_Data
+
+Extra Scripts: RF_Event_Station_map_radial.m (For plotting)
 
 Description_Download_Teleseismic_RF_Data.txt will explain all that you should know about the script.
 
 📌 Purpose:
 This script automates the downloading and processing of teleseismic event data for Receiver Function (RF) analysis by:
 
-Fetching event catalogs from IRIS FDSN
-Downloading station metadata
-Computing P-wave arrival times using TauP Toolkit
-Fetching and converting miniSEED waveform data to SAC format
-Downloading Pole-Zero (PZ) response files for instrument correction
+Fetching event catalogs from IRIS FDSN, 
+Downloading station metadata, 
+Computing P-wave arrival times using TauP Toolkit, 
+Fetching and converting miniSEED waveform data to SAC format, 
+Downloading Pole-Zero (PZ) response files for instrument correction.
 
