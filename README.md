@@ -12,7 +12,7 @@ TauP Toolkit for travel-time calculations, for P-wave/P-Phases arrival calculati
 
 mseed2sac for miniSEED to SAC conversion (https://ds.iris.edu/ds/nodes/dmc/software/downloads/mseed2sac/2-1/)
 
-IRIS FetchData script for waveform downloading (Included in the repository)
+IRIS FetchData script for waveform downloading (FetchData_original.pl - Included in the repository)
 Main Script: Download_Teleseismic_RF_Data
 
 Extra Scripts: RF_Event_Station_map_radial.m (For plotting)
